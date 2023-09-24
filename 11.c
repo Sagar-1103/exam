@@ -1,4 +1,4 @@
-//inserting at begining
+//inserting after specific node
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -19,11 +19,11 @@ void linkedListTraverse(struct Node *ptr)
     printf("\n");
 }
 
-struct Node *insertAtBegining(struct Node *head,int data){
+struct Node *insertAfterNode(struct Node *head,int data,struct Node *prevNode){
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
-    ptr->data = data;
-    ptr->next=head;
-    head=ptr;
+    ptr->data=data;
+    ptr->next = prevNode->next;
+    prevNode->next = ptr;
     return head;
 };
 
@@ -44,7 +44,7 @@ int main(int argc, char const *argv[])
     third->data = 33;
     third->next = NULL;
     linkedListTraverse(head);
-    head = insertAtBegining(head,44);
+    head = insertAfterNode(head,44,second);
     linkedListTraverse(head);
     return 0;
 }
