@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//deleting element
 void delete(int *arr,int *size,int index){
     if (index<0||index>*size)
     {

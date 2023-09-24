@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// slide window problem
 void findSubarraysWithTargetSum(int arr[], int n, int target) {
     int start = 0;
     int end = 0;

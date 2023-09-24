@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+//binary search
 void binarySearch(int arr[], int size, int element)
 {
     int high = size - 1, mid, low = 0;
@@ -18,9 +18,6 @@ void binarySearch(int arr[], int size, int element)
         else if (arr[mid] > element)
         {
             high = mid - 1;
-        } 
-        else {
-        printf("Element not found");
         }
     }
 }
